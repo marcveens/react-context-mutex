@@ -2,13 +2,18 @@
   "name": "react-context-mutex",
   "version": "1.0.0",
   "description": "Use a mutex lock to prevent callback duplication, now used as a React hook",
-  "main": "index.js",
+  "main": "dist/react-context-mutex.js",
+  "module": "dist/react-context-mutex.es.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@types/react": "^16.9.17",
     "react": "^16.12.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rollup -c",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -24,7 +29,13 @@
     "@types/jest": "^24.9.0",
     "@types/node": "^12.12.25",
     "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "rollup": "^1.29.0",
+    "rollup-plugin-typescript2": "^0.25.3",
     "ts-jest": "^24.3.0",
+    "tslib": "^1.10.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.7.5"
   }
 }
