@@ -1,4 +1,7 @@
 # react-context-mutex
+[![npm version](https://badgen.net/npm/v/react-context-mutex)](https://www.npmjs.com/package/react-context-mutex)
+[![Build Status](https://travis-ci.com/marcveens/react-context-mutex.svg?branch=master)](https://travis-ci.com/marcveens/react-context-mutex)
+
 A mutex implementation using React and React context. It will prevent a function from running multiple times, until you allow it to run again. 
 
 I created this because I wanted to prevent a fetch from running multiple times after implementing a custom hook in multiple components. The custom hook had a `useEffect` which ran the fetch function.
