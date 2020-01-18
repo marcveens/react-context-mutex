@@ -1,5 +1,5 @@
 import React from 'react';
 
-type MutextContext = string[];
+type MutexContext = string[];
 
-export const MutexContext = React.createContext<MutextContext>([]);
+export const MutexContext = React.createContext<MutexContext>([]);

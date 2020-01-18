@@ -12,28 +12,40 @@
   "scripts": {
     "test": "jest",
     "build": "rollup -c",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run lint && npm run test && npm run clean && npm run build"
   },
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcveens/react-context-mutext.git"
+    "url": "https://github.com/marcveens/react-context-mutex.git"
   },
   "author": "Marc Veens <marcveens@hotmail.com> (http://marcveens.nl/)",
   "bugs": {
     "url": "https://github.com/marcveens/react-context-mutex/issues"
   },
-  "homepage": "https://github.com/marcveens/react-context-mutext",
+  "homepage": "https://github.com/marcveens/react-context-mutex",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.9.0",
     "@types/node": "^12.12.25",
     "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
     "rollup": "^1.29.0",
     "rollup-plugin-typescript2": "^0.25.3",
     "ts-jest": "^24.3.0",
     "tslib": "^1.10.0",
     "tslint": "^5.20.1",
     "typescript": "^3.7.5"
-  }
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "mutex"
+  ]
 }
