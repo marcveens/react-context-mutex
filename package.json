@@ -11,6 +11,7 @@
   },
   "scripts": {
     "test": "jest",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "build": "rollup -c",
     "lint": "tslint -p tsconfig.json",
     "clean": "rimraf dist",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@types/jest": "^24.9.0",
     "@types/node": "^12.12.25",
+    "coveralls": "^3.0.9",
     "jest": "^24.9.0",
     "rimraf": "^3.0.0",
     "rollup": "^1.29.0",
