@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFetchHook } from './useFethHook';
+import { useFetchHook } from './useFetchHook';
 
 export const FetchComponent = () => {
     const { data } = useFetchHook();
