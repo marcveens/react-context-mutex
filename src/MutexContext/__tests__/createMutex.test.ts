@@ -117,7 +117,7 @@ describe('createMutex', () => {
         expect(mutexStore).toEqual([]);
     });
 
-    it('should run the second callback in case of a locked mutax', () => {
+    it('should run the second callback in case of a locked mutex', () => {
         // arrange
         const Mutex = createMutex(mutexStore);
         const mutexInstance = new Mutex('test1');
