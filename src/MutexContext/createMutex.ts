@@ -1,7 +1,7 @@
 export type MutexRunner = new (id: string) => {
     id: string;
     /** Runs the mutex callback in case it's not locked */
-    run: (callback: () => void) => void;
+    run: (resolveCallback: () => void, rejectCallback?: () => void) => void;
     /** Locks the mutex instance */
     lock: () => void;
     /** Unlocks the mutex instance */
@@ -18,9 +18,13 @@ export const createMutex = (context: string[]): MutexRunner => {
             this.id = id;
         }
 
-        public run = (callback: () => void) => {
+        public run = (resolveCallback: () => void, rejectCallback?: () => void) => {
             if (!this.isLocked()) {
-                callback();
+                resolveCallback();
+            } else {
+                if (rejectCallback && typeof rejectCallback === 'function') {
+                    rejectCallback();
+                }
             }
         }
 

@@ -116,4 +116,25 @@ describe('createMutex', () => {
         expect(mockCall).toBeCalledTimes(1);
         expect(mutexStore).toEqual([]);
     });
+
+    it('should run the second callback in case of a locked mutax', () => {
+        // arrange
+        const Mutex = createMutex(mutexStore);
+        const mutexInstance = new Mutex('test1');
+        const mockCall = jest.fn();
+
+        // act 
+        mutexInstance.run(() => {
+            mutexInstance.lock();
+        });
+
+        mutexInstance.run(() => {
+            //
+        }, () => {
+            mockCall();
+        });
+
+        // assert
+        expect(mockCall).toBeCalledTimes(1);
+    });
 });
