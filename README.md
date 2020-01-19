@@ -1,7 +1,7 @@
 # react-context-mutex
 [![npm version](https://badgen.net/npm/v/react-context-mutex)](https://www.npmjs.com/package/react-context-mutex)
-[![Build Status](https://travis-ci.com/marcveens/react-context-mutex.svg?branch=master)](https://travis-ci.com/marcveens/react-context-mutex)
-[![Coverage Status](https://coveralls.io/repos/github/marcveens/react-context-mutex/badge.svg?branch=master)](https://coveralls.io/github/marcveens/react-context-mutex?branch=master)
+[![Build Status](https://travis-ci.com/marcveens/react-context-mutext.svg?branch=master)](https://travis-ci.com/marcveens/react-context-mutex)
+[![codecov](https://codecov.io/gh/marcveens/react-context-mutex/branch/master/graph/badge.svg)](https://codecov.io/gh/marcveens/react-context-mutex)
 
 A mutex implementation using React and React context. It will prevent a function from running multiple times, until you allow it to run again. 
 
