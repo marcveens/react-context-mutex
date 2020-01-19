@@ -6,7 +6,5 @@ export const useMutex = () => {
     const mutexContext = useContext(MutexContext);
     const Mutex = createMutex(mutexContext);
 
-    return {
-        Mutex
-    };
+    return Mutex;
 };

@@ -14,7 +14,7 @@ const timeout = (ms: number) => {
 };
 
 const useMockFetch = (props: MockMutexProps) => {
-    const { Mutex } = useMutex();
+    const Mutex = useMutex();
     const mutex = new Mutex(props.mutexKey);
 
     useEffect(() => {

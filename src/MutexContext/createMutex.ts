@@ -1,5 +1,16 @@
+export interface Mutex {
+    /** Runs the mutex callback in case it's not locked */
+    run: (callback: () => void) => void;
+    /** Locks the mutex instance */
+    lock: () => void;
+    /** Unlocks the mutex instance */
+    unlock: () => void;
+    /** Shows whether the mutex instance is locked or not */
+    isLocked: () => boolean;
+}
+
 export const createMutex = (context: string[]) => {
-    return class Mutex {
+    return class MutexRunner implements Mutex {
         public id: string;
 
         constructor(id: string) {
