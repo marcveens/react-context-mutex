@@ -6,9 +6,10 @@
   "module": "dist/react-context-mutex.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest",
-    "coverage": "codecov",
     "build": "rollup -c",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "coverage": "codecov",
     "lint": "tslint -p tsconfig.json",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
@@ -28,10 +29,14 @@
   "homepage": "https://github.com/marcveens/react-context-mutex",
   "license": "MIT",
   "devDependencies": {
+    "@types/enzyme": "^3.10.4",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.9.0",
     "@types/node": "^12.12.25",
     "@types/react": "^16.9.17",
     "codecov": "^3.6.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^24.9.0",
     "nyc": "^15.0.0",
     "react": "^16.12.0",
@@ -51,5 +56,8 @@
     "hooks",
     "react-hooks",
     "mutex"
-  ]
+  ],
+  "dependencies": {
+    "react-dom": "^16.12.0"
+  }
 }

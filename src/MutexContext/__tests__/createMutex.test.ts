@@ -89,10 +89,6 @@ describe('createMutex', () => {
         // act 
         mutexInstance.run(() => {
             mutexInstance.lock();
-            mockCall();
-        });
-
-        mutexInstance.run(() => {
             mutexInstance.lock();
             mockCall();
         });
