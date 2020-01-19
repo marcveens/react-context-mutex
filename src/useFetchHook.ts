@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useMutex } from './MutexContext/useMutex';
+import { useMutex } from 'react-context-mutex';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './store/store';
 
