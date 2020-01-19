@@ -4,7 +4,7 @@ import { createMutex } from './createMutex';
 
 export const useMutex = () => {
     const mutexContext = useContext(MutexContext);
-    const Mutex = createMutex(mutexContext);
+    const MutexRunner = createMutex(mutexContext);
 
-    return Mutex;
+    return MutexRunner;
 };
