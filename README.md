@@ -7,8 +7,16 @@ A mutex implementation using React and React context. It will prevent a function
 
 I created this because I wanted to prevent a fetch from running multiple times after implementing a custom hook in multiple components. The custom hook had a `useEffect` which ran the fetch function.
 
+## Install 
+    $ npm install react-context-mutex
+
+## Demo
+[![Edit react-context-mutex](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-context-mutex-w27h0?expanddevtools=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2FuseFetchHook.ts&theme=dark)
+
 ## How to use
 ```ts
+import { useMutex } from 'react-context-mutex';
+
 const fetchData = () => {
     const mutex = new Mutex('myUniqueKey1');
 
