@@ -1,0 +1,6 @@
+{
+  "preset": "ts-jest",
+  "collectCoverage": true,
+  "testEnvironment": "jsdom",
+  "setupFiles": ["./src/setupTests.ts"]
+}
