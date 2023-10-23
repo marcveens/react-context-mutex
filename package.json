@@ -1,6 +1,6 @@
 {
   "name": "react-context-mutex",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Use a mutex lock to prevent callback duplication, now used as a React hook",
   "type": "module",
   "main": "dist/react-context-mutex.js",
